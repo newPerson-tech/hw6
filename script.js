@@ -1,5 +1,3 @@
-
-
 /* 1) Display on the page numbers from 10 to 20 in line separated by comma*/
 const numbersArray = [];
 
@@ -31,12 +29,11 @@ function multiplyNum() {
     for (let i = 1; i <= 7; i++) {
         for (let j = 1; j <= 10; j++) {
             if (i === 7) {
-                document.write(` ${i} * ${j} = ${i * j} <br>`);
+                let result = i * j;
             }
         }
-        document.write(`<br>`);
+        return result;
     }
-    return;
 }
 
 document.write(`Task Three solution: ${multiplyNum()}`);
@@ -179,3 +176,11 @@ document.write(`Multiplication table:`)
 document.write(`<br>`);
 
 displayMultiplication();
+
+
+
+
+
+
+
+
