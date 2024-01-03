@@ -1,24 +1,22 @@
-document.body.onload = addElement;
 
-function addElement() {
+// document.body.onload = addElement();
+
+function addElement(tag, text, wrapIdEl) {
     //create new div el-t
-    const newDiv = document.createElement('div');
+    const newDiv = document.createElement(tag);
     //adding content
-    const newContent = document.createTextNode('Task');
-    //adding text node to div
-    newDiv.appendChild(newContent);
+    newDiv.innerHTML = text;
     //adding new div to DOM
-    const currentDiv = document.getElementById('task-one');
-
-    document.body.insertBefore(newDiv, currentDiv);
+    const wrapIdEl = document.getElementById(wrapIdEl);
+    if (wrapIdEl) {
+        wrapIdEl.appendChild(newDiv);
+    }
 }
-
-
-
 
 
 /* 1) Display on the page numbers from 10 to 20 in line separated by comma*/
 
+let taskOne = document.getElementById('task-one');
 //creating empty array to write numbers in
 let numbersArray = [];
 for (let i = 10; i <= 20; i++) {
@@ -28,7 +26,7 @@ for (let i = 10; i <= 20; i++) {
 //converting array into a string
 let numbersString = numbersArray.toString();
 
-addElement();
+addElement(div, numbersString, taskOne);
 
 
 /* 2) Display squares of numbers from 10 to 20*/
@@ -193,7 +191,7 @@ document.write(`<br>`);
 
 document.write(`Summ of paired divisors of a given number are: ${divisorsSumm}`);
 
-// Display multiplication table for all numbers
+// 12) Display multiplication table for all numbers
 
 function displayMultiplication() {
     for (let i = 1; i <= 10; i++) {
@@ -212,7 +210,6 @@ document.write(`Multiplication table:`)
 document.write(`<br>`);
 
 displayMultiplication();
-
 
 
 
