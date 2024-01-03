@@ -1,3 +1,16 @@
+const taskOne = document.getElementById('task-one');
+const taskTwo = document.getElementById('task-two');
+const taskThree = document.getElementById('task-three');
+const taskFour = document.getElementById('task-four');
+const taskFive = document.getElementById('task-five');
+const taskSix = document.getElementById('task-six');
+const taskSeven = document.getElementById('task-seven');
+const taskEight = document.getElementById('task-eight');
+const taskNine = document.getElementById('task-nine');
+const taskTen = document.getElementById('task-ten');
+const taskEleven = document.getElementById('task-eleven');
+
+
 /* 1) Display on the page numbers from 10 to 20 in line separated by comma*/
 const numbersArray = [];
 
@@ -7,7 +20,7 @@ for (let i = 10; i <= 20; i++) {
 
 let numbersString = numbersArray.toString();
 
-document.write(`Task One solution: ${numbersString}`);
+taskOne.innerHTML = `Task One solution: ${numbersString}`;
 
 
 /* 2) Display squares of numbers from 10 to 20*/
@@ -19,9 +32,7 @@ for (let i = 10; i <= 20; i++) {
 
 let squaresString = squaresArray.toString();
 
-document.write(`<br>`);
-
-document.write(`Task Two solution: ${squaresString}`);
+taskTwo.innerHTML = `Task Two solution: ${squaresString}`;
 
 // 3) Display multiplication table for number 7
 
@@ -36,7 +47,9 @@ function multiplyNum() {
     }
 }
 
-document.write(`Task Three solution: ${multiplyNum()}`);
+const multipleTableSeven = multiplyNum();
+
+taskThree.innerHTML = `Task Three solution: ${multipleTableSeven}`;
 
 
 // 4) Count summ of all integers from 1 to 15
@@ -50,11 +63,9 @@ function countIntegers() {
     return summ;
 }
 
-document.write(`<br>`);
-
 const summarisingResult = countIntegers();
 
-document.write(`Task Four solution: ${summarisingResult}`);
+taskFour.innerHTML = `Task Four solution: ${summarisingResult}`;
 
 
 // 5) Count multiplication of all integers in a range from 15 to 35 
@@ -65,10 +76,10 @@ function multiplyIntegers() {
     }
     return result;
 }
-document.write(`<br>`);
 
 const multiplicationResult = multiplyIntegers();
-document.write(`Task Five solution: ${multiplicationResult}`);
+
+taskFive.innerHTML = `Task Five solution: ${multiplicationResult}`;
 
 
 // 6) Find arithmetical mean of all integers from 1 to 100
@@ -80,10 +91,10 @@ function findArithmeticalMean() {
     }
     return average;
 }
-document.write(`<br>`);
 
 const averageResult = findArithmeticalMean();
-document.write(`Task Six solution: ${averageResult}`);
+
+taskSix.innerHTML = `Task Six solution: ${averageResult}`;
 
 // 7) Display numbers from 100 to 300 which are multiple if 3
 function multipleOfThree() {
@@ -98,9 +109,7 @@ function multipleOfThree() {
 
 const numsMultipleOfThree = multipleOfThree();
 
-document.write(`<br>`);
-
-document.write(`Task Seven solution: ${numsMultipleOfThree}`);
+taskSeven.innerHTML = `Task Seven solution: ${numsMultipleOfThree}`;
 
 
 // 8) Find all natural number divisors
@@ -116,9 +125,7 @@ function naturalNumDivisors(natNum) {
 
 const numberDivisors = naturalNumDivisors(10);
 
-document.write(`<br>`);
-
-document.write(`Task Eight solution: ${numberDivisors}`);
+taskEight.innerHTML = `Task Eight solution: ${numberDivisors}`;
 
 // 9) Find all paired divisors of a number
 function pairedNumDivisors(number) {
@@ -133,9 +140,7 @@ function pairedNumDivisors(number) {
 
 const divisorsPaired = pairedNumDivisors(10);
 
-document.write(`<br>`);
-
-document.write(`Task Nine solution: ${divisorsPaired}`);
+taskNine.innerHTML = `Task Nine solution: ${divisorsPaired}`;
 
 
 // 10) Count summ of all paired divisors of a number 
@@ -153,29 +158,24 @@ function pairedDivisorsSumm(number) {
 
 const divisorsSumm = pairedDivisorsSumm(53);
 
-document.write(`<br>`);
-
-document.write(`Task Ten solution: ${divisorsSumm}`);
+taskTen.innerHTML = `Task Ten solution: ${divisorsSumm}`;
 
 
 // 11) Display multiplication table for all numbers
 function displayMultiplication() {
     for (let i = 1; i <= 10; i++) {
         for (let j = 1; j <= 10; j++) {
-            document.write(` ${i} * ${j} = ${i * j} <br>`);
+            let result = ` ${i} * ${j} = ${i * j}`;
         }
-        document.write(`<br>`);
     }
-    return;
+    return result;
 }
 
-document.write(`<br>`);
+let multiTable = displayMultiplication();
 
-document.write(`Multiplication table:`)
+taskEleven.innerHTML = `Task Eleven solution: ${multiTable}`;
 
-document.write(`<br>`);
 
-displayMultiplication();
 
 
 
