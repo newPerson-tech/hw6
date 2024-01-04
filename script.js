@@ -179,11 +179,3 @@ displayMultiplication();
 taskEleven.innerHTML = `Task Eleven solution is below`;
 
 
-
-
-
-
-
-
-
-
