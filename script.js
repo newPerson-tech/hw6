@@ -40,16 +40,16 @@ function multiplyNum() {
     for (let i = 1; i <= 7; i++) {
         for (let j = 1; j <= 10; j++) {
             if (i === 7) {
-                let result = i * j;
+                document.write(`${i} * ${j} = ${i * j} <br>`);
             }
         }
-        return result;
     }
 }
+document.write(`<br>`);
 
-const multipleTableSeven = multiplyNum();
+multiplyNum();
 
-taskThree.innerHTML = `Task Three solution: ${multipleTableSeven}`;
+taskThree.innerHTML = `Task Three solution is below`;
 
 
 // 4) Count summ of all integers from 1 to 15
@@ -160,20 +160,23 @@ const divisorsSumm = pairedDivisorsSumm(53);
 
 taskTen.innerHTML = `Task Ten solution: ${divisorsSumm}`;
 
+document.write(`<br>`);
 
 // 11) Display multiplication table for all numbers
 function displayMultiplication() {
-    for (let i = 1; i <= 10; i++) {
-        for (let j = 1; j <= 10; j++) {
-            let result = ` ${i} * ${j} = ${i * j}`;
+    for (let i = 1; i <= 9; i++) {
+        for (let j = 1; j <= 9; j++) {
+            document.write(`${i} * ${j} = ${i * j} <br>`);
         }
+        document.write(`<br>`);
     }
-    return result;
 }
 
-let multiTable = displayMultiplication();
+document.write(`<br>`);
 
-taskEleven.innerHTML = `Task Eleven solution: ${multiTable}`;
+displayMultiplication();
+
+taskEleven.innerHTML = `Task Eleven solution is below`;
 
 
 
